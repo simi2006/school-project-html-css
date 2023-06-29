@@ -35,10 +35,13 @@ header {
 }
 
 main {
-    min-height: 80vh;
+    min-height: 70vh;
     grid-area: content;
     background-color: var(--color-1);
     color: var(--white);
+}
+img {
+    float: right;
 }
 
 nav {
