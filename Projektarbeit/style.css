@@ -1,0 +1,129 @@
+:root {
+    --white: #F0EDEE;
+    --light-gray: #908E8E;
+    --gray: #525252;
+    --light-black: #1f1f1f;
+    --black: #000000;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: auto;
+    max-width: 1200px;
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: 7% 86% 7%;
+    grid-template-areas:
+        "header header header"
+        "sidebar content side"
+        "footer footer footer";
+    background-color: var(--black);
+    font-family: Roboto sans-serif;
+}
+
+header, main, aside, footer{
+    padding: 10px;
+    border: 1px solid black;
+    min-height: 100px;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--light-black);
+    color: var(--white);
+}
+
+main {
+    min-height: 80vh;
+    grid-area: content;
+    background-color: var(--color-1);
+    color: var(--white);
+}
+
+nav {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav ul {
+    width: 100%;
+    column-count: 2;
+}
+nav a:hover {
+    text-decoration: underline var(--white);
+}
+
+article {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--light-black);
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--light-black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content-between {
+    display: flex;
+    justify-content: space-between;
+}
+.content-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.d-flex {
+    display: flex;
+}
+button {
+    border: 0;
+    background-color: inherit;    
+    color: var(--white);
+}
+
+tr table {
+    width: 50%;
+}
+
+td {
+    width: 25%;
+}
+
+.title {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.favoriteColor {
+    color: greenyellow;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+    }
+    ul {
+        column-count: 1;
+    }
+}
